@@ -1,0 +1,68 @@
+{
+  "name": "commit-snap",
+  "displayName": "Commit Snap",
+  "description": "Generate git snapshots for LLM-powered commit messages",
+  "version": "0.0.5",
+  "publisher": "BhanukaIsuru",
+  "engines": {
+    "vscode": "^1.96.2"
+  },
+  "categories": [
+    "SCM Providers",
+    "Other"
+  ],
+  "keywords": [
+    "git",
+    "commit",
+    "snapshot",
+    "ai",
+    "llm",
+    "chatgpt",
+    "claude"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "commit-snap.generateSnapshot",
+        "title": "Generate Git Snapshot",
+        "category": "Commit Snap"
+      },
+      {
+        "command": "commit-snap.openLastSnapshot",
+        "title": "Open Last Generated Snapshot",
+        "category": "Commit Snap"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.96.2",
+    "@typescript-eslint/eslint-plugin": "^8.x",
+    "@typescript-eslint/parser": "^8.x",
+    "eslint": "^9.x",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhanuka96/commit-snap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bhanuka96/commit-snap/issues"
+  },
+  "homepage": "https://github.com/bhanuka96/commit-snap",
+  "license": "MIT"
+}
